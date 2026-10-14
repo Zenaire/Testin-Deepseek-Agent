@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepSeek AI - Tentang</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dark { @apply dark:bg-gray-900 dark:text-white; }
+  </style>
+</head>
+<body class="dark">
+  <nav class="bg-white dark:bg-gray-800 shadow">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <span class="text-xl font-bold">DeepSeek AI</span>
+        </div>
+        <div class="flex items-center">
+          <a href="index.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Beranda</a>
+          <a href="about.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Tentang</a>
+          <a href="tutorial.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Tutorial</a>
+          <a href="contact.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Kontak</a>
+          <button onclick="toggleDarkMode()" class="p-2 rounded-md text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-16">
+    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">Tentang DeepSeek AI</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">DeepSeek AI adalah platform inovatif yang menggabungkan kecerdasan buatan canggih dengan kekuatan komputasi untuk memecahkan masalah yang kompleks dan mendorong keberlanjutan. Kami berkomitmen untuk memberikan solusi yang efisien, akurat, dan ramah lingkungan.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-6 bg-gray-50 dark:bg-gray-700 rounded-lg">
+            <h3 class="text-xl font-bold mb-4">Visi</h3>
+            <p class="text-gray-700 dark:text-gray-300">Menjadi penggerak utama dalam perjalanan menuju solusi AI yang lebih inklusif, berkelanjutan, dan mendorong keberlanjutan.</p>
+          </div>
+          <div class="p-6 bg-gray-50 dark:bg-gray-700 rounded-lg">
+            <h3 class="text-xl font-bold mb-4">Misi</h3>
+            <p class="text-gray-700 dark:text-gray-300">Membangun model AI yang dapat diakses oleh semua, dengan fokus pada keadilan, keberlanjutan, dan inovasi teknologi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const mode = document.body.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', mode);
+    }
+
+    window.addEventListener('load', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.body.classList.add(savedTheme);
+      }
+    });
+  </script>
+</body>
+</html>

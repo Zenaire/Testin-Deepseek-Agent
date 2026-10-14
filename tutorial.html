@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepSeek AI - Tutorial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dark { @apply dark:bg-gray-900 dark:text-white; }
+  </style>
+</head>
+<body class="dark">
+  <nav class="bg-white dark:bg-gray-800 shadow">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <span class="text-xl font-bold">DeepSeek AI</span>
+        </div>
+        <div class="flex items-center">
+          <a href="index.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Beranda</a>
+          <a href="about.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Tentang</a>
+          <a href="tutorial.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Tutorial</a>
+          <a href="contact.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Kontak</a>
+          <button onclick="toggleDarkMode()" class="p-2 rounded-md text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-16">
+    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">Tutorial Penggunaan DeepSeek AI</h2>
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold mb-4">Menggunakan API DeepSeek</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Untuk menggunakan layanan API DeepSeek, Anda dapat mengikuti langkah-langkah berikut:</p>
+          <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+            <li>Registrasi akun di platform DeepSeek dan dapatkan kunci API</li>
+            <li>Instalasi dan konfigurasi SDK atau klien API</li>
+            <li>Mengirimkan permintaan ke endpoint API dengan format data yang sesuai</li>
+            <li>Memproses respons dari server dan mengekstrak hasil yang diperlukan</li>
+          </ul>
+        </div>
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold mb-4">Model Lokal melalui Ollama</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Jika Anda lebih memilih menggunakan model lokal, Anda bisa menggunakan Ollama untuk menghosting dan mengoperasikan model DeepSeek secara lokal. Ini memberikan keuntungan seperti:</p>
+          <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+            <li>Ketidakbergantungan pada koneksi internet</li>
+            <li>Respon yang lebih cepat dan lebih rendah latency</li>
+            <li>Pengelolaan data yang lebih terenkripsi dan aman</li>
+          </ul>
+        </div>
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold mb-4">Perbandingan Layanan API vs Model Lokal</h3>
+          <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <tr class="text-gray-700 dark:text-gray-300">
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">Layanan API</td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">Kemudahan Akses</span>
+              <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">Tinggi</span>
+              <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200">Sedang</span>
+            <tr>
+            <tr class="text-gray-700 dark:text-gray-300">
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">Model Lokal</td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">Kontrol Penuh</span>
+              <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">Rendah</span>
+              <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200">Tinggi</span>
+            <tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const mode = document.body.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', mode);
+    }
+
+    window.addEventListener('load', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.body.classList.add(savedTheme);
+      }
+    });
+  </script>
+</body>
+</html>

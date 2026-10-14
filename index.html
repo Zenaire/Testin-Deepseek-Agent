@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepSeek AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dark { @apply dark:bg-gray-900 dark:text-white; }
+  </style>
+</head>
+<body class="dark">
+  <nav class="bg-white dark:bg-gray-800 shadow">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <span class="text-xl font-bold">DeepSeek AI</span>
+        </div>
+        <div class="flex items-center">
+          <a href="index.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Beranda</a>
+          <a href="about.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Tentang</a>
+          <a href="tutorial.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Tutorial</a>
+          <a href="contact.html" class="mx-2 px-3 py-2 rounded-md text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Kontak</a>
+          <button onclick="toggleDarkMode()" class="p-2 rounded-md text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-16">
+    <section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl font-extrabold mb-6">Selamat Datang di DeepSeek AI</h1>
+          <p class="text-lg mb-8">Pembelajar dan pengguna AI yang canggih untuk mendorong inovasi dan perubahan.</p>
+          <div class="flex justify-center">
+            <a href="tutorial.html" class="bg-white text-blue-700 px-8 py-3 rounded-md text-lg font-medium hover:bg-blue-100 transition">Mulai Tutorial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Fitur Utama</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-4">Kekuatan Komputasi</h3>
+            <p class="text-gray-700 dark:text-gray-300">DeepSeek AI menawarkan kemampuan komputasi yang luar biasa untuk menyelesaikan tugas-tugas yang kompleks dengan kecepatan tinggi.</p>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-4">Dukungan Multimodal</h3>
+            <p class="text-gray-700 dark:text-gray-300">Dukungan untuk berbagai jenis input dan output, termasuk teks, gambar, dan suara, dengan akurasi tinggi.</p>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-4">Akurasi Tinggi</h3>
+            <p class="text-gray-700 dark:text-gray-300">Model yang dilatih dengan data terbesar dan terbaik, memberikan hasil yang akurat dan konsisten.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Manfaat Menggunakan DeepSeek AI</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-4">Peningkatan Produktivitas</h3>
+            <p class="text-gray-700 dark:text-gray-300">Automate repetitive tasks and focus on higher-level work with DeepSeek AI's powerful capabilities.</p>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-4">Pendekatan Berkelanjutan</h3>
+            <p class="text-gray-700 dark:text-gray-300">Optimize resource usage and reduce environmental impact through efficient AI solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const mode = document.body.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', mode);
+    }
+
+    // Apply saved theme preference
+    window.addEventListener('load', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.body.classList.add(savedTheme);
+      }
+    });
+  </script>
+</body>
+</html>
